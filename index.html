@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/jquery.superslide.2.1.1.js"></script>
+<script type="text/javascript" src="js/jquery.touchslider.js"></script>
+<!--控制banner切换效果-->
+<script type="text/javascript">
+$(document).ready(function () {
+	$(".main_visual").hover(function(){
+		$("#btn_prev,#btn_next").fadeIn()
+		},function(){
+		$("#btn_prev,#btn_next").fadeOut()
+		})
+	$dragBln = false;
+	$(".main_image").touchSlider({
+		flexible : true,
+		speed : 200,
+		btn_prev : $("#btn_prev"),
+		btn_next : $("#btn_next"),
+		paging : $(".flicking_con a"),
+		counter : function (e) {
+			$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+		}
+	});
+	$(".main_image").bind("mousedown", function() {
+		$dragBln = false;
+	})
+	$(".main_image").bind("dragstart", function() {
+		$dragBln = true;
+	})
+	$(".main_image a").click(function() {
+		if($dragBln) {
+		 return false;
+		}
+	})
+	timer = setInterval(function() { $("#btn_next").click();}, 4000);
+	$(".main_visual").hover(function() {
+		clearInterval(timer);
+	}, function() {
+		timer = setInterval(function() { $("#btn_next").click();}, 4000);
+	})
+	$(".main_image").bind("touchstart", function() {
+		clearInterval(timer);
+	}).bind("touchend", function() {
+		timer = setInterval(function() { $("#btn_next").click();}, 4000);
+	})
+});
+</script>
+<title>青海省三江源生态保护协会</title>
+<meta name="keywords" content="青海省三江源生态保护协会"/>
+<meta name="description" content="青海省三江源生态保护协会"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<!-- 防止IE8,7进入怪异模式 -->
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<link rel="icon" href="images/favicon.gif" type="/image/gif">
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+<script language="javascript">
+function checkform3(nForm)  
+{
+	if(nForm.keys.value==""||nForm.keys.value=="搜索关键词")
+	{
+		alert("请输入关键字!");
+		nForm.keys.focus();
+		return false;
+	}
+}
+</script>
+<script type="text/javascript" src="js/zh.js"></script>
+<script>
+zh_tran('t');
+</script>
+<div class="top_bg">
+	<div class="menu b_center">
+		<div class="logo_l">
+			<a href="index.html"><img src="upload/picture/a.png"></a>
+		</div>
+		<div class="logo_r">
+			<div class="nav">
+				<ul>
+					<li class="m on">
+					<h3><a href="index.html" title="首页">首页</a></h3>
+					</li>
+					<li class="m ">
+					<h3><a href="about.html" title="关于我们">关于我们</a></h3>
+					<li class="m ">
+					<h3><a href="news.html" title="环保动态">环保动态</a></h3>
+					</li>
+					<li class="m ">
+					<h3><a href="videos.html" title="视频中心">视频中心</a></h3>
+					</li>
+                    <li class="m ">
+					<h3><a href="product.html" title="社区特产">社区特产</a></h3>
+					</li>
+
+					<li class="m ">
+					<h3><a href="help.html" title="资助信息">资助信息</a></h3>
+					</li>
+                    <li class="m ">
+					<h3><a href="contact.html" title="联系我们">联系我们</a></h3>
+					</li>
+
+				</ul>
+				<script type="text/javascript"> jQuery(".nav").slide({ type:"menu",  titCell:".m", targetCell:".sub", effect:"slideDown", delayTime:300, triggerTime:100,returnDefault:true});</script>
+			</div>
+		</div>
+		<!-- clear the floats if required -->
+		<div class="clear">
+		</div>
+	</div>
+</div>
+<!--header_100 end-->
+<div class="h84">
+	&nbsp;
+</div>
+<!--banner star-->
+<div class="main_visual">
+	<div class="flicking_con">
+		<div class="flicking_inner">
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+		</div>
+	</div>
+	<!--flicking_con end-->
+	<div class="main_image">
+		<ul>
+			<li><span style="background:url(images/3.png) no-repeat center top;"><a ></a></span></li>
+			<li><span style="background:url(images/2.png) no-repeat center top;"><a ></a></span></li>
+			<li><span style="background:url(images/1.png) no-repeat center top;"><a ></a></span></li>
+		</ul>
+		<a  id="btn_prev"></a>
+		<a  id="btn_next"></a>
+	</div>
+	<!--main_image end-->
+</div>
+<!--banner end--><!--正文begin--><!--我们的服务begin-->
+<div class="i_service" style="background:url(images/i_ongbg.jpg) #fff center top no-repeat;">
+	<div class="i_service_t">
+		FAITH
+		<h2>我们的<span>理念</span></h2>
+	</div>
+	<div class="i_service_desc">
+	我们始终以青康藏高原的生态哲学思想和以此延伸的优秀生态文化为依托，以人与自然和谐为信念，以真情为动力，以感悟为手段，以民间大众为方式，同有缘之人携手，与乡村百姓并肩，积极促进社会各阶层释放人类最善良、最博大、最慈悲的爱，孜孜不倦且持之以恒致力于三江源地区自然生态环境保护。
+	</div>
+	<div class="wrap">
+		<ul class="i_service_ul">
+			<li onmouseover="$(this).find('img').attr('src','images/i_pic1_sel.png')" onmouseout="$(this).find('img').attr('src','images/i_pic1.png')"><a><img src="upload/picture/i_pic1.png"/>
+			<h2>水的保护</h2>
+			<p>
+				亚洲水源保护地驻守三江源净水项目
+			</p>
+			</a></li>
+			<li onmouseover="$(this).find('img').attr('src','images/i_pic2_sel.png')" onmouseout="$(this).find('img').attr('src','images/i_pic2.png')"><a><img src="upload/picture/i_pic2.png"/>
+			<h2>人的培养</h2>
+			<p>
+				三江源基层环保组织能力建设项目
+			</p>
+			</a></li>
+			<li onmouseover="$(this).find('img').attr('src','images/i_pic3_sel.png')" onmouseout="$(this).find('img').attr('src','images/i_pic3.png')"><a><img src="upload/picture/i_pic3.png"/>
+			<h2>乡村建设</h2>
+			<p>
+				乡村社区为主体的自然保护模式，完成甘达三大梦想
+			</p>
+			</a></li>
+		</ul>
+	</div>
+</div>
+<!--我们的服务end--><!--我们的产品begin-->
+<div class="i_product">
+	<div class="i_service_t" style="padding-top:36px;">
+		PROJECT
+		<h2>我们的<span>项目</span></h2>
+	</div>
+	<div class="M_7">
+		<div class="slideTxtBox3">
+			<div class="parBd">
+				<div class="picScroll-left2">
+					<div class="hd cd">
+						<a class="sNext"></a>
+						<a class="sPrev"></a>
+					</div>
+					<div class="bd dd">
+						<div style=" position: relative; width: 1084px;" class="tempWrap">
+							<ul class="picList" style="width: 1298px; left: 0px; position: relative; padding: 0pt; margin: 0pt; overflow:visible;">
+								<li><a href="case/零废弃.html" title="零废弃社区">
+								<div class="img">
+									<img src="upload/picture/零废弃社区.jpg" alt="零废弃社区"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									零废弃社区
+								</div>
+								</a></li>
+								<li><a href="#" title="亚洲水源牧场计划">
+								<div class="img">
+									<img src="upload/picture/亚洲水源牧场计划.jpg" alt="亚洲水源牧场计划"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									亚洲水源牧场计划
+								</div>
+								</a></li>
+								<li><a href="case/环保人网络.html" title="环保人网络项目">
+								<div class="img">
+									<img src="upload/picture/寻找雪域环保人.JPG" alt="环保人网络项目"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									环保人网络项目
+								</div>
+								</a></li>
+								<li><a href="case/绿色健康项目.html" title="绿色健康项目">
+								<div class="img">
+									<img src="upload/picture/乡村医生培养计划.JPG" alt="绿色健康项目"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									绿色健康项目
+								</div>
+								</a></li>
+								<li><a href="case/青少年生态道德教育.html" title="青少年生态道德教育">
+								<div class="img">
+									<img src="upload/picture/青少年生态道德教育.JPG" alt="青少年生态道德教育"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									青少年生态道德教育
+								</div>
+								</a></li>
+								<li><a href="case/生态伦理道德教育.html" title="生态伦理道德教育">
+								<div class="img">
+									<img src="upload/picture/生态伦理道德教育.JPG" alt="生态伦理道德教育"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									生态伦理道德教育
+								</div>
+								</a></li>
+
+
+
+
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--我们的产品end--><!--公司动态begin-->
+<div class="i_service_t" style="padding-top:36px;">
+		NEWS
+	<h2>环保<span>动态</span></h2>
+</div>
+<div class="wrap m_t30">
+	<div class="i_about_l">
+		<a href="case/case1.html"><img src="upload/picture/甘达马帮.JPG" alt="生态马帮"/></a>
+		<a href="case/case1.html"><h2>推动建设青藏高原第一个零废弃社区</h2></a>
+		<p>
+			生态马帮
+		</p>
+		<a href="case/case1.html" class="i_about_more"></a>
+	</div>
+	<div class="i_about_r">
+		<ul class="blog_list">
+			<li>
+			<a href="case/黑帐篷.html" title="黑帐篷">
+			<span class="blog_Rtime l">
+			<b>10</b>
+			<em>2017-01</em>
+			</span>
+			<span class="blog_Rmore r">
+			<b>走进黑帐篷</b>
+			<span>佐瓦家已经从土房中搬出来，住进了黑帐篷</span>
+			</span>
+			</a>
+			</li>
+
+			<li>
+			<a href="case/拆除围栏.html" title="甘达村实施拆除围栏计划">
+			<span class="blog_Rtime l">
+			<b>14</b>
+			<em>2016-10</em>
+			</span>
+			<span class="blog_Rmore r">
+			<b>甘达村实施拆除围栏计划</b>
+			<span>围栏影响了草原生态和牧户团结，2017年7月1日起，所有社区保护地统一拆除围栏。</span>
+			</span>
+			</a>
+			</li>
+			<li>
+			<a href="case/传统经幡.html" title="传统经幡的恢复和传承">
+			<span class="blog_Rtime l">
+			<b>14</b>
+			<em>2016-10</em>
+			</span>
+			<span class="blog_Rmore r">
+
+			<b>传承中的传统经幡</b>
+			<span>失踪许久，当传统经幡再次飘扬在高原的天空……。</span>
+			</span>
+			</a>
+			</li>
+		</ul>
+	</div>
+	<div class="c_l">
+	</div>
+</div>
+
+
+<div class="i_product">
+	<div class="i_service_t" style="padding-top:36px;">
+		VIDEOS
+		<h2>视频<span>中心</span></h2>
+	</div>
+	<div class="M_7">
+		<div class="slideTxtBox3">
+			<div class="parBd">
+				<div class="picScroll-left2">
+					<div class="hd cd">
+						<a class="sNext"></a>
+						<a class="sPrev"></a>
+					</div>
+					<div class="bd dd">
+						<div style=" position: relative; width: 1084px;" class="tempWrap">
+							<ul class="picList" style="width: 1298px; left: 0px; position: relative; padding: 0pt; margin: 0pt; overflow:visible;">
+								<li><a href="videohtml/video1.html" title="痴恋雪域">
+								<div class="img">
+									<img src="upload/picture/痴恋雪域的副本.jpg" alt="痴恋雪域"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									痴恋雪域
+								</div>
+								</a></li>
+								<li><a href="videohtml/video2.html" title="寻找雪域环保人--行车篇">
+								<div class="img">
+									<img src="upload/picture/雪域环保人的副本.JPG" alt="寻找雪域环保人--行车篇"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									寻找雪域环保人--行车篇
+								</div>
+								</a></li>
+								<li><a href="videohtml/video3.html" title="故乡三江源">
+								<div class="img">
+									<img src="upload/picture/故乡三江源的副本.JPG" alt="故乡三江源"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									故乡三江源
+								</div>
+								</a></li>
+								<li><a href="videohtml/video4.html" title="净土">
+								<div class="img">
+									<img src="upload/picture/净土的副本.jpg" alt="净土"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									净土
+								</div>
+								</a></li>
+								<li><a href="videohtml/video5.html" title="生命在雪域的旅途">
+								<div class="img">
+									<img src="upload/picture/雪域旅途的副本.jpg" alt="生命在雪域的旅途"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									生命在雪域的旅途
+								</div>
+								</a></li>
+								<li><a href="videohtml/video6.html" title="三江源生态环境保护协会">
+								<div class="img">
+									<img src="upload/picture/协会宣传的副本.png" alt="三江源生态环境保护协会"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									三江源生态环境保护协会
+								</div>
+								</a></li>
+								<li><a href="videohtml/video7.html" title="壹基金典范工程">
+								<div class="img">
+									<img src="upload/picture/一基金的副本.JPG" alt="壹基金典范工程"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									壹基金典范工程
+								</div>
+								</a></li>
+								<li><a href="videohtml/video8.html" title="这是垃圾吗">
+								<div class="img">
+									<img src="upload/picture/垃圾宣传的副本.JPG" alt="这是垃圾吗"/>
+								</div>
+								<div class="txt2">
+									<em>查看更多</em>
+								</div>
+								<div class="txt3">
+									这是垃圾吗
+								</div>
+								</a></li>
+
+
+
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--公司动态end--><!--正文end--><!--尾部begin-->
+<div class="foot_txt">
+	<div class="wrap" style="position:relative;">
+	 联系我们：0971-4325444
+		<br/>
+		<a href="about.html" title="关于我们" class="foot_title">关于我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="news.html" title="环保动态">环保动态</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="case.html" title="成功案例">成功案例</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="events.html" title="人物事迹">人物事迹</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="videos.html" title="视频中心">视频中心</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="contact.html" title="联系我们">联系我们</a>
+		<a href="#" class="f_top" onclick="goTop()">&nbsp;</a>
+	</div>
+</div>
+<div class="f_bg">
+	<div class="b_center" style="width:1200px;">
+		<span class="l"> © 青海省三江源生态保护协会 All Rights Reserved&nbsp;&nbsp;</span>
+
+		<div class="c_l">
+		</div>
+	</div>
+</div>
+<!--尾部end-->
+<script language="javascript" src="js/foot.js"></script>
+</body>
+</html>
